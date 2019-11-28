@@ -12,3 +12,22 @@
 
 #Next 24hrs in sha Allah
 functions , objects, scope, events, strings, stringMethods, Numbers
+
+11/28/2019
+realised the mistakes that were done yesto writing the whole code in one today it is rectfied
+#lessons taken
+1.functions
+2.strings
+3.Math
+4.Numbers
+5.Dates
+6.Arrays
+
+##Next 24hrs
+1.Booleans
+2.Comparisons
+3.Conditions
+4.Switch
+5.For loop
+6.While loop
+7.Break
