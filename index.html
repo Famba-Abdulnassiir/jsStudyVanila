@@ -7,38 +7,51 @@
     <title>JS learning</title>
 </head>
 <body>
-    <p id="fans">this is going to output when script calls the id(fans)</p>
-    <p id="func"></p>
     <script>
-        document.write("this one commonly used in inline js");
-        window.alert("this one outputs in an alert window");
-        console.log("this one out puts in a log of a browser");
-        document.getElementById.innerHTML=("fans");
-
-    //functions function that multipies numbers
-   
-    function multiply(p1, p2) {
-        return p1*p2;
+        function ord()
+        {
+         let rd1 = document.getElementById("rd1");
+         let rd2 = document.getElementById("rd2");
+         let rd3 = document.getElementById("rd3");
+         let rd4 = document.getElementById("rd4");
+         let rd5 = document.getElementById("rd5");
+         
+         if(rd1.checked==true)
+         {
+             alert("Thank you for chooseing"+" "+rd1.value);
+         }
+         else if(rd2.checked==true)
         
-    } 
-    document.getElementById("func").innerHTML=multiply(10,5);
-
-    function addition(){
-        let p3=4;
-        let p4=6;
-        let total= p3 + p4;
-        document.write("<br>"+total);
-    } 
-    addition(); //function call the function wont run unless it has been called or invoked
-
-    function addition2(p, q){
+             alert("Thank you for chooseing"+" "+rd2.value);
+          else if(rd3.checked==true)
         
-        let total2= p + q;
-        document.write("<br>"+total2);
-    }
-     
-    addition2(4,7);
+             alert("Thank you for chooseing"+" "+rd3.value);
+        else if(rd4.checked==true)
+        
+             alert("Thank you for chooseing"+" "+rd4.value);
+         else if(rd5.checked==true)
+         
+             alert("Thank you for chooseing"+" "+rd5.value);
+        else alert("please make sure u choose atleast a Meal");
 
+        }
     </script>
+
+ <div style="padding-left: 5%;">
+     <h1>WELCOME TO FANS RESTAURANT MENU</h1>
+<p>please check your favouratite food</p>
+<input type="radio" id="rd1" value="Katogo" name="foods">Katogo
+<br>
+<input type="radio" id="rd2" value="Pilau" name="foods" >Pilau
+<br>
+<input type="radio" id="rd3" value="Chicken" name="foods">Chicken
+<br>
+<input type="radio" id="rd4" value="Matooke" name="foods">Matooke
+<br>
+<input type="radio" id="rd5" value="Beans & posho" name="foods">Beans & Posho
+<br>
+<button id="sndbtn" onclick="ord()"> Submit your order</button>
+</div>
+
 </body>
 </html>
