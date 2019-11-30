@@ -7,38 +7,68 @@
     <title>JS learning</title>
 </head>
 <body>
-    <p id="fans">this is going to output when script calls the id(fans)</p>
-    <p id="func"></p>
     <script>
-        document.write("this one commonly used in inline js");
-        window.alert("this one outputs in an alert window");
-        console.log("this one out puts in a log of a browser");
-        document.getElementById.innerHTML=("fans");
+          
+        function add()
+        {
+            let fnum1 = document.getElementById("fnum").value;
+            let snum1 = document.getElementById("snum").value;
+            let sum = fnum1 += snum1;
+            document.getElementById("ans").innerHTML=("The answer is"+" "+sum);
+            
 
-    //functions function that multipies numbers
-   
-    function multiply(p1, p2) {
-        return p1*p2;
-        
-    } 
-    document.getElementById("func").innerHTML=multiply(10,5);
+        }
+        function sub()
+        {
+            let fnum1 = document.getElementById("fnum").value;
+            let snum1 = document.getElementById("snum").value;
+            let sum = fnum1 - snum1;
+            document.getElementById("ans").innerHTML=("The answer is"+" "+sum);
+            
 
-    function addition(){
-        let p3=4;
-        let p4=6;
-        let total= p3 + p4;
-        document.write("<br>"+total);
-    } 
-    addition(); //function call the function wont run unless it has been called or invoked
+        }
+        function mul()
+        {
+            let fnum1 = document.getElementById("fnum").value;
+            let snum1 = document.getElementById("snum").value;
+            let sum = fnum1 * snum1;
+            document.getElementById("ans").innerHTML=("The answer is"+" "+sum);
+            
 
-    function addition2(p, q){
-        
-        let total2= p + q;
-        document.write("<br>"+total2);
-    }
-     
-    addition2(4,7);
+        }
+        function div()
+        {
+            let fnum1 = document.getElementById("fnum").value;
+            let snum1 = document.getElementById("snum").value;
+            let sum = fnum1/snum1;
+            document.getElementById("ans").innerHTML=("The answer is"+" "+sum);
+            
 
+        }
     </script>
+   
+<h1 style="text-align: center;">Fans Calculator</h1>
+<div style="padding-left: 40%;">
+        <input id="fnum" type="text" placeholder="input first number" >
+        <br>
+        <br>
+        <input id="snum" type="text" placeholder="input Second number" >
+        <br>
+        <p id="ans"></p>
+        <br>
+        <button type="button" id="addbtn" onclick="add()">Clik to Add</button>
+        <button type="button" id="subbtn"onclick="sub()">Click to Subtract</button>
+        <br>
+        <br>
+        <button type="button" id="mulbtn" onclick="mul()">Click to Multiply</button>
+        <button type="button" id="divbtn" onclick="div()">Click to Divid</button>
+        
+
+        <p>Thank you for using the fans Javascript calculator</p>
+</div>
+
+
+
+    
 </body>
 </html>
