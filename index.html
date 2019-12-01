@@ -7,38 +7,20 @@
     <title>JS learning</title>
 </head>
 <body>
-    <p id="fans">this is going to output when script calls the id(fans)</p>
-    <p id="func"></p>
-    <script>
-        document.write("this one commonly used in inline js");
-        window.alert("this one outputs in an alert window");
-        console.log("this one out puts in a log of a browser");
-        document.getElementById.innerHTML=("fans");
+   <script>
+   </script>
 
-    //functions function that multipies numbers
-   
-    function multiply(p1, p2) {
-        return p1*p2;
-        
-    } 
-    document.getElementById("func").innerHTML=multiply(10,5);
-
-    function addition(){
-        let p3=4;
-        let p4=6;
-        let total= p3 + p4;
-        document.write("<br>"+total);
-    } 
-    addition(); //function call the function wont run unless it has been called or invoked
-
-    function addition2(p, q){
-        
-        let total2= p + q;
-        document.write("<br>"+total2);
-    }
-     
-    addition2(4,7);
-
-    </script>
+   <h2>please fill in to register with fansmail</h2>
+   <form>
+    <input type="text" id="email" placeholder="Enter Email">
+    <br> <br>
+    <input type="text" id="phone" placeholder=" Enter Phone Number">
+    <br> <br>
+    <input type="password" id="pass1" placeholder="Enter password">
+    <br> <br>
+    <input type="password" id="pass2" placeholder="Comfirm Password">
+    <br> <br>
+    <button type="submit" id="subbtn">Create Acct</button>
+   </form>
 </body>
 </html>
