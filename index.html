@@ -7,27 +7,35 @@
     <title>JS learnig</title>
 </head>
 <body>
-    <script>
-        function select()
-        {
-         let sel = document.getElementById("selectbox1");
-         alert("Thank you for selecting "+sel.options[sel.selectedIndex].value);
+   <script>
+       function validate()
+       {
+           let uname = document.getElementById("uname").value;
+           let pass =document.getElementById("pass").value;
 
+           if(uname=="Habib" && pass=="123")
+           {
+            return true;
+           }
+            else
+           {
 
-        }
-    </script>
-
-<h1>WELCOME TO FANS SOLUTIONS</h1>
-<P>Please select gadget u want to purchase</P>
-<select id="selectbox1"> 
-    <option value="Mouse">Mouse</option>
-    <option value="Keyboard">keyboard</option>
-    <option value="Printer">Printer</option>
-    <option value="Laptops">Laptops</option>
-    
-</select>
+            alert("User name or password did not match");
+           return false;
+           }
+         
+           
+       }
+   </script>
+   <form id="frmbtn" onsubmit="return validate()" action="home.html">
+    <p>Please Enter ure username and password</p>
+    <input type="text" id="uname" placeholder="Enter Username">
     <br>
     <br>
-<button type="button" id="btn1" onclick="select()">Click to comfirm</button>
+    <input type="password" id="pass" placeholder="Enter password">
+    <br> <br>
+    <button type="submit"  id="subbtn">Login</button>
+   </form>
+   <p>Note the try out username is Habib and password is 123</p>
 </body>
 </html>
