@@ -8,19 +8,61 @@
 </head>
 <body>
    <script>
+       function fn1()
+       {
+           let email = document.getElementById("email").value;
+           let phone = document.getElementById("phone").value;
+           let pass1 = document.getElementById("pass1").value;
+           let pass2 = document.getElementById("pass2").value;
+
+           let ereg = /^07[0-9]{8}$/;
+           let nreg =/^([a-z 0-9 \.-_ i]+)@([a-z i]+).([a-z i]+)(.[a-z i]?)$/
+           if(pass1.trim()=="" || email.trim()=="" ||phone.trim()=="")
+           {
+            alert("ensure all the feilds are filled")
+           }
+           else if(pass1 !== pass2)
+           {
+            alert("passwords don't much");
+           }
+           else 
+            if(ereg.test(phone))
+           {
+            document.getElementById("lbl").innerHTML="valid phone Number";
+            document.getElementById("lbl").style.visibility="visible";
+            document.getElementById("lbl").style.color="green";
+           } else {
+            document.getElementById("lbl").innerHTML="invalid phone Number";
+            document.getElementById("lbl").style.visibility="visible";
+            document.getElementById("lbl").style.color="red";
+           }
+            if(nreg.test(email))
+           {
+            document.getElementById("lbl2").innerHTML="valid Email";
+            document.getElementById("lbl2").style.visibility="visible";
+            document.getElementById("lbl2").style.color="green";
+           } else {
+            document.getElementById("lbl2").innerHTML="invalid Email";
+            document.getElementById("lbl2").style.visibility="visible";
+            document.getElementById("lbl2").style.color="red";
+           }
+
+       }
    </script>
 
    <h2>please fill in to register with fansmail</h2>
-   <form>
+   
     <input type="text" id="email" placeholder="Enter Email">
-    <br> <br>
+    <label id="lbl2" style="visibility: hidden; color: rgb(0, 139, 63);">Valid Email</label>
+     <br> <br>
     <input type="text" id="phone" placeholder=" Enter Phone Number">
+    <label id="lbl" style="visibility: hidden; color: rgb(0, 139, 63);">Valid phone Number</label>
     <br> <br>
     <input type="password" id="pass1" placeholder="Enter password">
     <br> <br>
     <input type="password" id="pass2" placeholder="Comfirm Password">
     <br> <br>
-    <button type="submit" id="subbtn">Create Acct</button>
-   </form>
+    <button type="button" id="subbtn" onclick="fn1()">Create Acct</button>
+   
 </body>
 </html>
