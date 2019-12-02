@@ -13,7 +13,7 @@
         {
             let fnum1 = document.getElementById("fnum").value;
             let snum1 = document.getElementById("snum").value;
-            let sum = fnum1 += snum1;
+            let sum = Number(fnum1) + Number(snum1); 
             document.getElementById("ans").innerHTML=("The answer is"+" "+sum);
             
 
