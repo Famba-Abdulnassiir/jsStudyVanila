@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!-- in this topic we shall cover the different string methods and
+ their properties NOTE: we shall also cover a bit of the previous 
+topics like naming, some operators, ifs where necessarry  -->
+    
+    <script>
+
+        //String Lenght
+        var alpabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        var len = alpabet.length;
+        console.log("The length of alphabets is "+len);
+
+        //indexOf() this method returns the first occurance of a specified string
+        var user ="The user Famba has the same password Famba"
+        var index = user.indexOf("Famba");
+        //it even accepts 2 values where by the secnd value is the beging searcg p0s
+        var index = user.indexOf("Famba",7);
+        console.log(index);
+
+        //lastIndexOf() this method returns the Last occurance of a specified string
+        var user ="The user Famba has the same password Famba"
+        var index = user.lastIndexOf("Famba");
+        console.log(index);
+
+        //SEARCH FOR STRING
+        var srch = user.search("Famba");
+        console.log(srch);
+
+        //EXTRACTING STRING PARTS (slice(start, end) substring(start, end) substr(start, lenght))
+        var fruits="Apple, Bannana, Oranges, Jackfruit, pineapple";
+        var ext1 =fruits.slice(6);//if the sec0nd part is 0mmitd 0ut it prints the rest
+        var ext1 =fruits.slice(6,14); //Remember we c0unt frm Zer0
+        console.log(ext1);
+
+        //substring
+        var ext2=fruits.substring(6,14);
+        console.log(ext2);
+
+        //substr they are the same but this takes the values that u want in the 2nd param
+        var ext3 =fruits.substr(6,8);
+        console.log(ext3);
+
+        //Replacing a String
+        var rep=fruits.replace("Bannana", "Water Mellon");
+        var rep = fruits.replace(/bannana/i, "Water Mellon")//added reg exp fr case sensitivity
+        console.log(rep);
+        
+        //c0nverting t0 Uppercase and L0wercase
+        var upper =fruits.toUpperCase();
+        console.log(upper);
+
+        var lower =fruits.toLowerCase();
+        console.log(lower)
+
+        //Removing the white space
+        var spaces = fruits.trim();
+        console.log(spaces);
+
+        //Converting strings t Arrays
+        var nArray = fruits.split(",");
+        console.log(nArray);
+
+
+
+    </script>
+</body>
+</html>
