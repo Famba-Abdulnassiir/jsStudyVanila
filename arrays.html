@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+     var animals=["Cat","Elephant","Cow","Dog","Lion"];
+      //0r
+      //c0mmas and spaces d0nt matter care ab0ut readability and neatness
+      var animals=["Cat",
+      "Elephant",
+      "Cow",
+      "Dog",
+      "Lion"];
+      console.log(animals[3]);//accessing an array variable by its index
+      console.log(animals);//accessing the entire array list
+
+      //length 0f an array
+      var len =animals.length;
+      console.log("The Length 0r 0ur array is: " +len);
+
+      var srt =animals.sort();//helps t0 s0rt the array in an ascending 0rder
+      console.log(srt);
+
+      //Accessing the First Element in an array
+      var frst=animals[0];
+      console.log(frst);
+
+      //Accessing the last Element in an array
+      var lst=animals[animals.length-1];
+      console.log(lst);
+      "<br>"
+
+      //l00ping thru an array
+    for (var index = 0; index < animals.length; index++) {
+        const element = animals[index];
+        console.log(element);
+        
+    }
+    
+animals.forEach(element => {
+    console.log("N0te f0reach : "+element);
+    
+});
+
+//Adding elements t0 an array the easiest way is t0 use push()
+animals.push("Zebra");
+console.log(animals);
+
+//0r 
+ //this sec0nd meth0d adds an element at a specific lengthe here
+//  we shall add "sheep" after the 3rd index in an array
+animals[3]="Sheep";
+animals[animals.length]="Sheep";//t0 aut0matically detect fr u the last index then it adds-
+console.log(animals);
+
+//h0w t0 detect an array
+Array.isArray(animals); //returns true
+// 0r 
+animals instanceof Array;
+
+//c0nverting arrays int0 strings
+console.log(animals.toString());
+
+//p0p() rem0ves last element in an array
+animals.pop();
+console.log(animals);
+
+//shift() rem0ves an element at the Begining unshift adds at the begining
+animals.shift();
+console.log(animals);
+
+//splice is a meth0d that can be used t0 add new elements t0 an array
+animals.splice(0,0,"Cat");
+console.log(animals);
+// in the splice methd the first num is f0r the index where u
+// want t add the element and the sec0nd is fr the number
+//  0f element u can delete t0 add 0thers
+
+//delete using the spice meth0d
+animals.splice(1,1);
+console.log(animals); //at index 1 delete 1 item dnt replace with any
+
+//Merging(c0ncatinating)Arrays
+var fruits =["Mangoes","Apple","Oranges","Bannana"];
+var all = animals.concat(fruits);
+console.log(all);
+
+//c0ncatinating m0redan 2 Arrays
+var serials =["Rice","Millet"];
+var all = animals.concat(fruits,serials);
+console.log(all);
+
+//slicing an array
+var slc =animals.slice(3);
+console.log(slc);
+
+//s0rting an Array
+fruits.sort();
+console.log(fruits);
+
+fruits.reverse();
+console.log(fruits); //frm the last t0 the start
+
+//srting descending
+fruits.sort(function(a,b){return b-a})
+console.log(fruits);
+
+//Rand0m s0rting
+fruits.sort(function(a,b){return 0.5 -Math.random()})
+console.log(fruits);
+
+var people =[
+    {name:"Famba", age:52, role:"Desinger"},
+    {name:"Habib", age:26, role:"Developer"},
+    {name:"Vero", age:24, role:"Analyst"}
+];
+console.log(people);
+
+//Aray filter creates a new array with elements that pass the test
+//
+var num =[1,2,3,4,10,11,12,15];
+var over10 = num.filter(myFunctin);
+
+function myFunctin(value){
+    return value > 10;
+}
+
+console.log(over10 )
+
+//Array.index0f() it searchs fr an element value and returns its p0siti0n
+var a=animals.indexOf("Lion");
+console.log(a) //it returns -1 if the element d0esnt exist
+
+//lastindex0f is like index0f but returns the 0ccurance 0f the last apperance
+
+
+
+
+    </script>
+</body>
+</html>
