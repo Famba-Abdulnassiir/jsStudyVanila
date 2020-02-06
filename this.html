@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this refers t0 the 0bject it bel0ngs t0
+        //this al0ne
+        var x = this;
+
+        x="fans";
+        console.log(x);
+
+        //this in a func
+        myfunc = (name,age,job) => {
+            this.name = name;
+
+        }
+        name ="Famba";
+        age = 52;
+        job = "Devel0per"
+
+        console.log("My name is "+ this.name +" and am "+ this.age + " wrk as a "+ this.job);
+
+        //this 0n 0bjects
+        var car = {
+            brand:"Subaru",
+            cc:"900cc",
+            make:"2010"
+        };
+
+        mycar =() => {
+            return "My fav0urate car is"+this.car.brand + " "+ this.car.cc +" "+ this.car.make;
+        }
+        console.log(mycar());
+// 0r
+var car = {
+            brand:"Subaru",
+            cc:"900cc",
+            make:"2010",
+            fullspec:function(){
+                return this.brand+" "+ this.cc +" "+ this.make;
+            }
+        };
+        console.log(car.brand);
+        
+        
+    </script>
+</body>
+</html>
