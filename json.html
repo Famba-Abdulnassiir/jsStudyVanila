@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+            "employees"[
+                {"firstName":"Famba","lastName":"Abdulnassiir","role":"Designer"},
+                {"firstName":"Nassiwa","lastName":"Vero","role":"Analyst"},
+                {"firstName":"Ssentongo","lastName":"Habib","role":"Developer"},
+                {"firstName":"Mwebaza","lastName":"Eunice","role":"user"}
+            ]
+        }
+
+        //ab0ve is an example 0f a JS0N
+        //c0nverting Js0n text t0 JavaScript )bject
+        let data = '{"employees":['+
+                '{"firstName":"Famba","lastName":"Abdulnassiir","role":"Designer"},'+
+                '{"firstName":"Nassiwa","lastName":"Vero","role":"Analyst"},'+
+                '{"firstName":"Ssentongo","lastName":"Habib","role":"Developer"},'+
+                '{"firstName":"Mwebaza","lastName":"Eunice","role":"user"}]}';
+            const staffObject = JSON.parse(data);
+            console.log(staffObject);
+
+    </script>
+</body>
+</html>
