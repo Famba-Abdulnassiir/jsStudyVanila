@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car {
+            constructor(brand){
+                this.carname = brand;
+            }
+        }
+        mycar = new Car("Subaru");
+        console.log(mycar);
+
+        //c0nstruct0r meht0d is special it is where u can intialize prperties
+        class Car1 {
+            constructor(brand){
+                this.carname = brand;
+            }
+            greet(){
+                return "hell0 my "+this.carname;
+            }
+        }
+        let mm = new Car1("masstang");
+        console.log(mm.greet());// the methd is activated here
+
+        
+        //inheritence uses key wrd extends and it is gd fr c0de reuse
+        //because it inherits the behavi0rs f the parent class by use f super()
+        class nvers extends Car{
+            constructor(brand, color, engine){
+               super(brand);
+               this.color =color;
+               this.engine =engine; 
+            }
+        }
+
+        let ncar = new nvers("Imprenza","Red","9000cc");
+        console.log(ncar);
+    </script>
+</body>
+</html>
