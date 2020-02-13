@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //they are the m0rdern ways 0f c0ncatinating (Es6 way)
+        let firstName = "Famba";
+        let lastName ="Abdulnassir";
+        let occupation ="Developer";
+
+        console.log(`My name is ${firstName} ${lastName} and my dream job is being a ${occupation}`);
+        // its p0wer in jsx is much fun u can run any html tag with in it.
+
+        const div = document.createElement("div");
+
+        div.innerHTML= `
+        <h1>My name is ${firstName} </h>
+        <h2> Last name is ${lastName}</h2>
+        <h3>I dream big to be a ${occupation}
+        `;
+
+        document.body.appendChild(div);
+
+
+    </script>
+</body>
+</html>
